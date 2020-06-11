@@ -1,5 +1,22 @@
 ## Apollo Federation Demo
 
+This is a fork of [apollographql/federation-demo](https://github.com/apollographql/federation-demo) demonstrating federating a graph (./services/discounts) that does not support federation with [graphql-transform-federation](https://github.com/0xR/graphql-transform-federation).
+
+```gql
+# saleDiscountPct is a transformed/federated field from services/discounts `productByUpc`
+query topProductReviews{
+  topProducts{
+    name,
+    saleDiscountPct
+    reviews {
+      body, author {
+        username
+      }
+    }
+  }
+}
+```
+
 This repository is a demo of using Apollo Federation to build a single schema on top of multiple services. The microservices are located under the [`./services`](./services/) folder and the gateway that composes the overall schema is in the [`gateway.js`](./gateway.js) file.
 
 ### Installation

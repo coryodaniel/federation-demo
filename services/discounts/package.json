@@ -1,0 +1,13 @@
+{
+  "name": "discounts",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@apollo/federation": "latest",
+    "apollo-server": "latest",
+    "graphql": "latest",
+    "graphql-tools": "^4.0.6",
+    "graphql-transform-federation": "^2.1.0"
+  }
+}
